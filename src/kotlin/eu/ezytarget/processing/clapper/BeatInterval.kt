@@ -1,6 +1,6 @@
 package eu.ezytarget.clapper
 
-enum class BeatInterval(val numberOfTicks: Int) {
+public enum class BeatInterval(val numberOfTicks: Int) {
     Sixteenth(numberOfTicks = 1),
     Eigth(numberOfTicks = 2),
     Quarter(numberOfTicks = 4),
