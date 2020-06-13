@@ -44,10 +44,10 @@
 	<property name="project.src" location="src"/>
 	<property name="project.tmp" location="tmp"/>
 	<property name="project.web" location="web"/>
-	<property name="project.data" location="data"/>
-	<property name="project.lib" location="lib"/>
+<!--	<property name="project.data" location="data"/>-->
+<!--	<property name="project.lib" location="lib"/>-->
 	<property name="project.bin" location="bin"/>
-	<property name="project.bin.data" location="${project.bin}/data"/>
+<!--	<property name="project.bin.data" location="${project.bin}/data"/>-->
 	<property name="project.examples" location="examples"/>
 	<property name="project.reference" location="reference"/>
 	<property name="project.dist" location="distribution"/>
@@ -66,7 +66,7 @@
 	<path id="classpath">
 		<fileset dir="${classpath.local.location}" includes="${classpath.local.include}" />
 		<fileset dir="${classpath.libraries.location}" includes="**/*.jar" />
-		<fileset dir="${project.lib}" includes="**/*.jar" />
+<!--		<fileset dir="${project.lib}" includes="**/*.jar" />-->
 	</path>		
 
 	
@@ -144,9 +144,9 @@ ${line}
 			</classpath>
 			<compilerarg value="-Xlint"/>
 		</javac>
-		<copy todir="${project.bin.data}">
-			<fileset dir="${project.data}" excludes="README" />
-		</copy>
+<!--		<copy todir="${project.bin.data}">-->
+<!--			<fileset dir="${project.data}" excludes="README" />-->
+<!--		</copy>-->
 	</target>
 	
 	
@@ -171,9 +171,9 @@ ${line}
   		<copy todir="${project.tmp}/${project.name}/src">
   			<fileset dir="${project.src}"/>
 	  	</copy>
-	  	<copy todir="${project.tmp}/${project.name}/${folder}">
-  			<fileset dir="${project.lib}" excludes="README" />
-	  	</copy>
+<!--	  	<copy todir="${project.tmp}/${project.name}/${folder}">-->
+<!--  			<fileset dir="${project.lib}" excludes="README" />-->
+<!--	  	</copy>-->
 	</target>
 	
 	
