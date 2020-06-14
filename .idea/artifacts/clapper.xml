@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="clapper">
+    <output-path>$PROJECT_DIR$/classes/artifacts/clapper</output-path>
+    <root id="archive" name="clapper.jar">
+      <element id="module-output" name="clapper" />
+    </root>
+  </artifact>
+</component>
