@@ -31,8 +31,8 @@ public class Clapper {
         initTickLengthMillis()
     }
 
-    public fun update(watchedBeatInterval: BeatInterval): Boolean =
-            update()[watchedBeatInterval]?.didChange ?: false
+    public fun update(listenedBeatInterval: BeatInterval): Boolean =
+            update()[listenedBeatInterval]?.didChange ?: false
 
     public fun update(): Map<BeatInterval, BeatIntervalUpdate> {
         val nowMillis = nowMillis
