@@ -27,6 +27,7 @@ public class Clapper {
     private lateinit var intervalNumbers: Map<BeatInterval, Int>
 
     public fun start() {
+        intervalNumbers = intervals.map { it to 0 }.toMap()
         startMillis = nowMillis
         initTickLengthMillis()
     }
@@ -38,8 +39,8 @@ public class Clapper {
         val nowMillis = nowMillis
         val numberOfTicks = ((nowMillis - startMillis) / tickLengthMillis).toInt()
         val changes = if (numberOfTicks == numberOfAcknowledgedTicks) {
-            intervalNumbers.map {
-                it.key to false
+            intervals.map {
+                it to false
             }.toMap()
         } else {
             numberOfAcknowledgedTicks = numberOfTicks
