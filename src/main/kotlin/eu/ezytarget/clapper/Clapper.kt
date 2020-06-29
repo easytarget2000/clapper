@@ -31,6 +31,9 @@ public class Clapper {
         initTickLengthMillis()
     }
 
+    public fun update(watchedBeatInterval: BeatInterval): Boolean =
+            update()[watchedBeatInterval]?.didChange ?: false
+
     public fun update(): Map<BeatInterval, BeatIntervalUpdate> {
         val nowMillis = nowMillis
         val numberOfTicks = ((nowMillis - startMillis) / tickLengthMillis).toInt()
